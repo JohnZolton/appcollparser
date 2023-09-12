@@ -72,12 +72,5 @@ if file is not None:
                 key="download_button"
             )
             st.write(f"Modified data has been written to '{output_csv_file}'.")
-    
-
-        # Write the modified rows to the output CSV file
-        with open(output_csv_file, 'w', newline='') as outfile:
-            csv_writer = csv.writer(outfile)
-            csv_writer.writerows(modified_rows)
-        st.write(f"Modified data has been written to '{output_csv_file}'.")
     else:
         st.write("error, must be .CSV file")
